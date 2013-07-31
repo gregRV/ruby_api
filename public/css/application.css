@@ -1,0 +1,37 @@
+body {
+	background-color: #0000CC;
+}
+
+.container {
+  margin: 20px auto;
+  width: 800px;
+  padding: 0px 20px 20px 20px;
+  border: 1px dotted black;
+  background-color: white;
+  border-radius: 8px;
+}
+th {
+  text-align: left;
+}
+
+li {
+	list-style-image: url('http://www.small-icons.com/stock-icons/small-computer40.gif');
+}
+
+.top {
+	text-align: center;
+}
+
+input {
+	text-align: center;
+}
+
+img {
+	margin: 5px;
+	border-radius: 8px;
+	border: 3px solid #0000CC;
+}
+
+#errors {
+	color: red;
+}

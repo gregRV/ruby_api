@@ -1,0 +1,30 @@
+<br>
+<a href="/">Some Tumblr Ish</a>
+
+<div class="top">
+	 <h1><%= @content['blog']['title'] %></h1>
+	 <h3><a class="btn btn-primary btn-large" href="<%= @content['blog']['url'] %>">Visit <%= @content['blog']['name'] %> on Tumblr</a></h3>
+</div>
+
+ <br><br>
+
+<!--'TEXT' POSTS -->
+<% if @type == 'text' %>
+	<% @posts.each do |post| %>
+		<li><%= post['body'] %></li>
+	<% end %>
+<% end %>
+
+<!--'PHOTO' POSTS (captions) -->
+<% if @type == 'photo' %>
+	<% @posts.each do |post| %>
+		<li><%= post['caption'] %></li>
+	<% end %>
+
+	<% @posts.each do |i|%>
+		<% i['photos'].each do |j| %>
+			<img src="<%= j['original_size']['url'] %>" /><br>
+		<% end %>
+	<% end %>
+<% end %>
+
